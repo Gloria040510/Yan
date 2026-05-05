@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>砚 · 2026 推免申请</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">砚</div>
+          <div>
+            <div class="brand-name">砚</div>
+            <div class="brand-sub">Yan · grounded</div>
+          </div>
+        </div>
+        <nav class="nav" id="nav"></nav>
+        <div class="privacy-card">
+          <strong>本地优先</strong>
+          <p>Key 读取自 config/app.local.json，不向前端返回明文。原文没写的字段，标记需确认。</p>
+          <button class="ghost-button" id="clearExportsBtn">清除缓存</button>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <div class="breadcrumb" id="breadcrumb">Yan / News</div>
+            <h1 id="pageTitle">保研资讯</h1>
+          </div>
+          <div class="profile-pill" id="profilePill">加载中</div>
+        </header>
+
+        <section class="page active" id="page-news"></section>
+        <section class="page" id="page-tech"></section>
+        <section class="page" id="page-package"></section>
+        <section class="page" id="page-profile"></section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

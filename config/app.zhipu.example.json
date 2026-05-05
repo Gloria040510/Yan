@@ -1,0 +1,27 @@
+{
+  "ai": {
+    "provider": "zhipu",
+    "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+    "apiKey": "your-zhipu-api-key-here",
+    "model": "glm-5"
+  },
+  "storage": {
+    "databaseFile": "data/db.json",
+    "uploadsDir": "uploads",
+    "exportsDir": "exports"
+  },
+  "profile": {
+    "name": "你的姓名",
+    "homeUniversity": "你的本科院校",
+    "major": "你的本科专业",
+    "targetMajor": "申请专业或方向",
+    "submitDate": "2026-05-12"
+  },
+  "export": {
+    "fontPath": "",
+    "logoLibraryDir": "src/images",
+    "logoMap": {
+      "浙江大学": "logos/zhejiang-university.png"
+    }
+  }
+}

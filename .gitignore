@@ -1,0 +1,8 @@
+config/app.local.json
+exports/
+uploads/
+node_modules/
+data/db.json
+data/db.backup-*.json
+src/images/______.png
+*.log

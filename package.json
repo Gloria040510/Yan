@@ -1,0 +1,18 @@
+{
+  "name": "baoyan-guardian",
+  "version": "0.1.0",
+  "private": true,
+  "description": "砚：面向 2026 届推免申请的智能助手原型",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1"
+  }
+}

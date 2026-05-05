@@ -9,7 +9,7 @@ export function matchMaterials(application, documents) {
   const linkedDocs = application.materialLinks || {};
   const matches = application.materials.map((requirement) => {
     const explicitDoc = allDocs.find((doc) => doc.id === linkedDocs[String(requirement.ordinal)]);
-    return matchOne(requirement, explicitDoc ? [explicitDoc] : availableDocs);
+    return matchOne(requirement, explicitDoc ? [explicitDoc] : availableDocs, { explicit: Boolean(explicitDoc) });
   });
   const blocking = matches.filter((item) => item.requirement.is_required !== "optional");
   const ready = blocking.filter((item) => item.state === "ready").length;
@@ -29,9 +29,9 @@ export function matchMaterials(application, documents) {
   };
 }
 
-function matchOne(requirement, documents) {
+function matchOne(requirement, documents, options = {}) {
   const normalized = requirement.name_normalized;
-  const candidates = normalized
+  const candidates = options.explicit ? documents : normalized
     ? documents.filter((doc) => doc.normalizedName === normalized)
     : documents.filter((doc) => requirement.raw_text.includes(doc.name) || requirement.name_original.includes(doc.name));
 
